@@ -6,9 +6,5 @@
   "ประเภทกีฬา/เพิ่มประเภทกีฬา.spec.js": {
     "desc": "ทดสอบกดเพิ่มประเภทกีฬา",
     "img": "fileimg/a8311dcdee761a150ccefb553d9137c6.jpg"
-  },
-  "sportstype.spec.js": {
-    "desc": "เทสหน้าประเภทกีฬา: เปิด /sportstype, login, เช็คหัวข้อ + ตาราง + ข้อมูล Muay Thai",
-    "img": "fileimg/40a04b79e7290cd8a900ae5c2238cebf.jpg"
   }
 }
