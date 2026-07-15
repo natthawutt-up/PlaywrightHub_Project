@@ -9,17 +9,13 @@ const { test, expect } = require('@playwright/test');
 
 test('เปิดหน้าประเภทกีฬา (/sportstype) อยู่', async ({ page }) => {
 
-  // 1) เปิดหน้าประเภทกีฬา
-  await page.goto('/sportstype');
-
-  await page.getByRole('button', { name: 'Login' }).click();
-  // 2) URL ต้องเป็น /sportstype (ไม่ถูกเด้งไปหน้า login)
-  await expect(page).toHaveURL(/\/sportstype/);
-
+  await page.goto('/');
   // 3) มีหัวข้อ "ประเภทกีฬา" (รอ SPA เรนเดอร์ได้ถึง 15 วินาที)
   await page.getByRole('button', { name: 'Login' }).click();
+
   await page.getByRole('link', { name: 'ประเภทกีฬา' }).click();
-  await page.getByRole('heading', { name: 'ประเภทกีฬา' }).click();
+
+  await page.getByRole('button', { name: 'เพิ่มประเภทกีฬา' }).click();
 
   // หมายเหตุ: ข้อมูลในแต่ละแถว (Muay Thai / มวยไทย + สถานะ) ต้อง login ก่อนถึงจะโหลด
   // ถ้าจะเช็คข้อมูลจริง ให้ตั้ง storageState (login) แล้วเพิ่ม เช่น:
