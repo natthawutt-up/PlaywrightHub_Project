@@ -3,6 +3,8 @@ import { test, expect } from '@playwright/test';
 test.describe('หน้าประเภทกีฬา - ลบประเภทกีฬาทดสอบ', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await page.getByPlaceholder('กรอกยูสเซอร์เนม').fill('adminNor1');
+    await page.getByPlaceholder('กรอกรหัสผ่าน').fill('111111');
     await page.getByRole('button', { name: 'Login' }).click();
     await page.getByRole('link', { name: 'ประเภทกีฬา' }).click();
   });
